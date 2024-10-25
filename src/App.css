@@ -1,38 +1,147 @@
-.App {
+/* Base styles for body and font */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8; /* Soft background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Main container styling */
+.container {
+  width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #ffffff; /* White background for the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header styling */
+h1 {
   text-align: center;
+  color: #333; /* Dark text for header */
+  margin-bottom: 25px; /* Space below header */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Input field styling */
+input[type="text"] {
+  width: 63%;
+  padding: 10px;
+  border: 1px solid #ddd; /* Light border for input */
+  border-radius: 5px; /* Rounded edges */
+  font-size: 16px;
+  margin-left: 40px;
+  transition: border-color 0.3s;
+  background-color:beige; /* Transition for border color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"]:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default outline */
+  border: 1px slateblue;
+  border-radius: 10px;
+}
+/* Remaining tasks counter styling */
+.remaining-tasks {
+  font-size: 18px; /* Larger font size for better visibility */
+  color: #333; /* Dark color for contrast */
+  text-align: center; /* Centered text */
+  margin: 20px 0; /* Space above and below */
+  padding: 10px; /* Padding for a better touch target */
+  background-color: #e7f3fe; /* Light blue background for visibility */
+  border-radius: 5px; /* Rounded corners */
+  border: 1px solid #b3e0ff; /* Soft border for definition */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+/* Button styling */
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px; /* Rounded corners for buttons */
+  background-color: #007bff; /* Primary button color */
   color: white;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px; /* Space between input and button */
+  transition: background-color 0.3s, transform 0.3s; /* Transition for hover effects */
 }
 
-.App-link {
-  color: #61dafb;
+/* Button hover effects */
+button:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  transform: translateY(-1px); /* Slight lift effect */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Task info styling */
+.task-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0; /* Space above and below */
+}
+
+/* Filter buttons styling */
+.filter-buttons {
+  display: flex;
+  gap: 10px; /* Space between buttons */
+  margin: 20px 0 ;
+  margin-left: 100px;  /* Space above and below */
+}
+
+.filter-buttons button {
+  background-color: #f0f0f0; /* Light grey background for filter buttons */
+  color: #333; /* Dark text */
+  padding: 8px 12px; /* Padding for buttons */
+  border-radius: 5px; /* Rounded edges */
+  border: 1px solid #ddd; /* Light border */
+  transition: background-color 0.3s, color 0.3s; /* Transition for hover effects */
+}
+
+/* Active filter button styling */
+.filter-buttons .active {
+  background-color: #007bff; /* Highlight active filter */
+  color: white; /* White text for active button */
+}
+
+/* Filter button hover effects */
+.filter-buttons button:hover {
+  background-color: #e7e7e7; /* Light grey on hover */
+}
+
+/* List styling */
+ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+/* Individual task styling */
+li {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Space between checkbox and text */
+  padding: 15px; /* Padding for each task */
+  border-bottom: 1px solid #eee; /* Light border below each task */
+  transition: background-color 0.3s; /* Transition for background color */
+}
+
+/* Completed task styling */
+.completed {
+  text-decoration: line-through; /* Strike-through text */
+  color: #aaa; /* Light grey color for completed tasks */
+}
+
+/* Hover effect for tasks */
+li:hover {
+  background-color: #f9f9f9; /* Light grey background on hover */
+}
+
+/* Clear completed button styling */
+.clear-button {
+  background-color: #dc3545; 
+  margin-left: 170px;/* Red for clear button */
+}
+
+.clear-button:hover {
+  background-color: #c82333; /* Darker red on hover */
 }
